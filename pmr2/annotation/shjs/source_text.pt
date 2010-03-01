@@ -1,4 +1,2 @@
-<h2>Rendering of the source file</h2>
-<div class="source_view">
-<pre tal:content="view/source"/>
-</div>
+<pre tal:attributes="class string:sh_${view/note/langtype}"
+     tal:content="view/source"/>

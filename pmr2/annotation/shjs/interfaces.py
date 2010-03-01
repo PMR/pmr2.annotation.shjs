@@ -11,6 +11,6 @@ class ISourceTextNote(zope.interface.Interface):
         title=u'Session File',
         description=u'The session file that is made for this file.',
         #vocabulary='shjs',
-        values=[u'c', u'cpp', u'xml'],
+        values=[u'c', u'cpp', u'xml', u'html'],
         default=u'xml',
     )

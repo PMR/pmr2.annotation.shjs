@@ -3,8 +3,9 @@ from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 from plone.z3cform import layout
 
 from pmr2.app.interfaces import IExposureSourceAdapter
-from pmr2.app.browser.layout import PlainLayoutWrapper
 from pmr2.app.browser.exposure import ExposureFileViewBase
+
+from pmr2.annotation.shjs.layout import ShjsLayoutWrapper
 
 
 class SourceTextNote(ExposureFileViewBase):
@@ -20,4 +21,4 @@ class SourceTextNote(ExposureFileViewBase):
             return a.file()
 
 SourceTextNoteView = layout.wrap_form(SourceTextNote, 
-    __wrapper_class=PlainLayoutWrapper)
+    __wrapper_class=ShjsLayoutWrapper)

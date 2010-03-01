@@ -22,6 +22,8 @@
 
   <!-- Browser pages -->
 
+  <adapter factory=".layout.shjs_layout_factory" />
+
   <browser:page
       for="pmr2.app.content.ExposureFile"
       name="source_text"
