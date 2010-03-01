@@ -35,9 +35,32 @@
 
   <script type="text/javascript">
   //<![CDATA[
+    function resizeMainView() {
+        var minHeight = 300;
+        var mainView = jq("#shjs-view div")
+        var mainViewPre = jq("#shjs-view div pre")
+        var winHeight = jq(window).height();
+        var viewTop = mainView.offset().top;
+        var curHeight = mainViewPre.outerHeight();
+
+        var rawHeight = winHeight - viewTop;
+        var maxHeight = Math.max(minHeight, rawHeight);
+        var newHeight = Math.min(curHeight, maxHeight);
+
+        mainView.css('height', newHeight);
+    };
+
+    var resizeTimer = null;
+    jq(window).bind('resize', function() {
+        if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(resizeMainView, 100);
+    });
+
     jq(document).ready(function() {
+      resizeMainView();
       sh_highlightDocument();
     });
+
   //]]>
   </script>
 
