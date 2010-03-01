@@ -29,4 +29,21 @@
       permission="zope2.View"
       />
 
+  <!-- Resources -->
+
+  <browser:resourceDirectory
+      name="pmr2.annotation.shjs.css"
+      directory="css"
+      />
+
+  <browser:resourceDirectory
+      name="pmr2.annotation.shjs.js"
+      directory="js"
+      />
+
+  <browser:resourceDirectory
+      name="pmr2.annotation.shjs.lang"
+      directory="lang"
+      />
+
 </configure>
