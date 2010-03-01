@@ -1,0 +1,32 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="pmr2">
+
+  <!-- Note storage -->
+
+  <adapter
+      for="pmr2.app.content.interfaces.IExposureFile"
+      factory=".SourceTextNoteFactory"
+      provides="pmr2.annotation.shjs.interfaces.ISourceTextNote"
+      name="source_text"
+      />
+
+  <!-- Note Generation -->
+
+  <utility
+      name="source_text"
+      component=".annotator.SourceTextAnnotatorFactory"
+      provides="pmr2.app.annotation.interfaces.IExposureFileAnnotator"
+      />
+
+  <!-- Browser pages -->
+
+  <browser:page
+      for="pmr2.app.content.ExposureFile"
+      name="source_text"
+      class=".browser.SourceTextNoteView"
+      permission="zope2.View"
+      />
+
+</configure>

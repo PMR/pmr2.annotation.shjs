@@ -8,7 +8,12 @@ pmr2.annotation.shjs.egg-info/dependency_links.txt
 pmr2.annotation.shjs.egg-info/entry_points.txt
 pmr2.annotation.shjs.egg-info/namespace_packages.txt
 pmr2.annotation.shjs.egg-info/not-zip-safe
+pmr2.annotation.shjs.egg-info/paster_plugins.txt
 pmr2.annotation.shjs.egg-info/requires.txt
 pmr2.annotation.shjs.egg-info/top_level.txt
 pmr2/annotation/__init__.py
 pmr2/annotation/shjs/__init__.py
+pmr2/annotation/shjs/annotator.py
+pmr2/annotation/shjs/browser.py
+pmr2/annotation/shjs/interfaces.py
+pmr2/annotation/shjs/note.py
