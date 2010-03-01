@@ -14,8 +14,13 @@ class SourceTextNote(ExposureFileViewBase):
     """
 
     template = ViewPageTemplateFile('source_text.pt')
+    title = ViewPageTemplateFile('source_title.pt')
+    
+    @property
+    def langtype(self):
+        return self.note.langtype
 
-    def source(self):
+    def content(self):
         a = zope.component.queryAdapter(self.context, IExposureSourceAdapter)
         if a:
             return a.file()

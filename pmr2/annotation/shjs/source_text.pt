@@ -1,2 +1,7 @@
-<pre tal:attributes="class string:sh_${view/note/langtype}"
-     tal:content="view/source"/>
+<div tal:condition="exists:view/title" tal:replace="structure view/title"/>
+<div id="shjs-view">
+<div>
+  <pre tal:attributes="class string:sh_${view/langtype}"
+       tal:content="view/content"/>
+</div>
+</div>
