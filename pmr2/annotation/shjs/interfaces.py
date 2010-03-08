@@ -8,8 +8,8 @@ class ISourceTextNote(zope.interface.Interface):
     """
 
     langtype = zope.schema.Choice(
-        title=u'Session File',
-        description=u'The session file that is made for this file.',
+        title=u'Language Type',
+        description=u'The language of this file.',
         #vocabulary='shjs',
         values=[u'c', u'cpp', u'xml', u'html'],
         default=u'xml',
