@@ -21,17 +21,7 @@
       tal:attributes="src string:$portal_url/++resource++pmr2.annotation.shjs.js/sh_main.min.js">
   </script>
 
-  <script type="text/javascript"
-      tal:attributes="src string:$portal_url/++resource++pmr2.annotation.shjs.lang/sh_xml.min.js">
-  </script>
-
-  <script type="text/javascript"
-      tal:attributes="src string:$portal_url/++resource++pmr2.annotation.shjs.lang/sh_html.min.js">
-  </script>
-
-  <script type="text/javascript"
-      tal:attributes="src string:$portal_url/++resource++pmr2.annotation.shjs.lang/sh_cpp.min.js">
-  </script>
+  <link rel="shjs_root" tal:attributes="href string:$portal_url/++resource++pmr2.annotation.shjs.lang/"/>
 
   <script type="text/javascript">
   //<![CDATA[
@@ -56,9 +46,10 @@
         resizeTimer = setTimeout(resizeMainView, 100);
     });
 
-    jq(document).ready(function() {
+    jq(window).bind('load', function() { 
+      shjs_root = jq('link[rel=shjs_root]')[0].href;
       resizeMainView();
-      sh_highlightDocument();
+      sh_highlightDocument(shjs_root, '.min.js');
     });
 
   //]]>
