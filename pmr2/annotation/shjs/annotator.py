@@ -9,7 +9,8 @@ from pmr2.annotation.shjs.interfaces import ISourceTextNote
 
 
 class SourceTextAnnotator(ExposureFileAnnotatorBase):
-    zope.interface.implements(IExposureFileAnnotator)
+    zope.interface.implements(IExposureFileAnnotator, 
+                              IExposureFileEditAnnotator)
     title = u'Source Viewer'
     label = u'Source View'
     for_interface = ISourceTextNote
