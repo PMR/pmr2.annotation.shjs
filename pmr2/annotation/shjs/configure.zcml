@@ -6,7 +6,7 @@
   <!-- Note storage -->
 
   <adapter
-      for="pmr2.app.content.interfaces.IExposureFile"
+      for="pmr2.app.exposure.interfaces.IExposureFile"
       factory=".SourceTextNoteFactory"
       provides="pmr2.annotation.shjs.interfaces.ISourceTextNote"
       name="source_text"
@@ -25,7 +25,7 @@
   <adapter factory=".layout.shjs_layout_factory" />
 
   <browser:page
-      for="pmr2.app.content.ExposureFile"
+      for="pmr2.app.exposure.interfaces.IExposureFile"
       name="source_text"
       class=".browser.SourceTextNoteView"
       permission="zope2.View"
