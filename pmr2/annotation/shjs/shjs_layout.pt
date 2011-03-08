@@ -5,7 +5,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       metal:use-macro="context/main_template/macros/master">
 
-<metal:slot metal:fill-slot="css_slot" 
+<metal:slot metal:fill-slot="style_slot" 
     i18n:domain="pmr2.annotation.shjs">
 
   <style type="text/css" 
