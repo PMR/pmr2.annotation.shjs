@@ -27,8 +27,8 @@
   //<![CDATA[
     function resizeMainView() {
         var minHeight = 300;
-        var mainView = jq("#shjs-view div")
-        var mainViewPre = jq("#shjs-view div pre")
+        var mainView = jq("#shjs-view div");
+        var mainViewPre = jq("#shjs-view div pre");
         var winHeight = jq(window).height();
         var viewTop = mainView.offset().top;
         var curHeight = mainViewPre.outerHeight();
