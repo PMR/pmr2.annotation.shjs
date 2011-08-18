@@ -18,8 +18,14 @@ Description: Introduction
         Changelog
         =========
         
-        trunk - Unreleased
-        ----------------
+        0.2.1 - Released (2011-08-17)
+        -----------------------------
+        
+        * Updated import location.
+        
+        
+        0.1 - Released (2010-05-14)
+        ---------------------------
         
         * Initial release
         
