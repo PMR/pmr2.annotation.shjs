@@ -1,6 +1,7 @@
 import zope.interface
 import zope.component
 from zope.schema import fieldproperty
+from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
 
 from pmr2.app.interfaces import *
 from pmr2.app.annotation.note import RawTextNote
@@ -11,7 +12,7 @@ from interfaces import *
 
 class SourceTextNote(ExposureFileEditableNoteBase):
     """\
-    Points to the OpenCell session attached to this file.
+    Source text note.
     """
 
     zope.interface.implements(ISourceTextNote)

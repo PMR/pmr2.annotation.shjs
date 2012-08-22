@@ -27,7 +27,7 @@
   <browser:page
       for="pmr2.app.exposure.interfaces.IExposureFile"
       name="source_text"
-      class=".browser.SourceTextNoteView"
+      class=".browser.SourceTextNote"
       permission="zope2.View"
       />
 

@@ -24,6 +24,3 @@ class SourceTextNote(ExposureFileViewBase):
         a = zope.component.queryAdapter(self.context, IExposureSourceAdapter)
         if a:
             return a.file()
-
-SourceTextNoteView = layout.wrap_form(SourceTextNote, 
-    __wrapper_class=ShjsLayoutWrapper)
