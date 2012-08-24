@@ -15,6 +15,7 @@ class SourceTextNote(ExposureFileViewBase):
 
     template = ViewPageTemplateFile('source_text.pt')
     title = ViewPageTemplateFile('source_title.pt')
+    index = ViewPageTemplateFile('shjs_layout.pt')
     
     @property
     def langtype(self):

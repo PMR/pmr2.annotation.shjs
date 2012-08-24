@@ -1,15 +1,15 @@
-<metal:block use-macro="here/global_defines/macros/defines" />
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:metal="http://xml.zope.org/namespaces/metal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      metal:use-macro="context/main_template/macros/master">
+      metal:use-macro="context/@@pmr2-macros/pmr2_main">
 
+<head>
 <metal:slot metal:fill-slot="style_slot" 
     i18n:domain="pmr2.annotation.shjs">
 
   <style type="text/css" 
-      tal:content="string:@import url($portal_url/++resource++pmr2.annotation.shjs.css/sh_nedit.min.css);">
+      tal:content="string:@import url(${view/portal_url}/++resource++pmr2.annotation.shjs.css/sh_nedit.min.css);">
   </style>
 
 </metal:slot>
@@ -18,10 +18,10 @@
     i18n:domain="pmr2.annotation.shjs">
 
   <script type="text/javascript"
-      tal:attributes="src string:$portal_url/++resource++pmr2.annotation.shjs.js/sh_main.min.js">
+      tal:attributes="src string:${view/portal_url}/++resource++pmr2.annotation.shjs.js/sh_main.min.js">
   </script>
 
-  <link rel="shjs_root" tal:attributes="href string:$portal_url/++resource++pmr2.annotation.shjs.lang/"/>
+  <link rel="shjs_root" tal:attributes="href string:${view/portal_url}/++resource++pmr2.annotation.shjs.lang/"/>
 
   <script type="text/javascript">
   //<![CDATA[
@@ -56,12 +56,13 @@
   </script>
 
 </metal:slot>
+</head>
 
 <body>
 
 <metal:slot metal:fill-slot="main" i18n:domain="cmf_default">
   <div id="layout-contents">
-    <span tal:replace="structure view/contents" />
+    <span tal:replace="structure view/template" />
   </div>
 </metal:slot>
 </body>
