@@ -1,11 +1,8 @@
 import zope.component
 from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
-from plone.z3cform import layout
 
 from pmr2.app.exposure.interfaces import IExposureSourceAdapter
 from pmr2.app.exposure.browser.browser import ExposureFileViewBase
-
-from pmr2.annotation.shjs.layout import ShjsLayoutWrapper
 
 
 class SourceTextNote(ExposureFileViewBase):
