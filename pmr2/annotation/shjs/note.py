@@ -1,7 +1,7 @@
 import zope.interface
 import zope.component
 from zope.schema import fieldproperty
-from zope.app.pagetemplate.viewpagetemplatefile import ViewPageTemplateFile
+from zope.browserpage.viewpagetemplatefile import ViewPageTemplateFile
 
 from pmr2.app.interfaces import *
 from pmr2.app.annotation.note import RawTextNote
