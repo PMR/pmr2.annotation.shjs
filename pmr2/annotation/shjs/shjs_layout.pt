@@ -21,7 +21,9 @@
       tal:attributes="src string:${view/portal_url}/++resource++pmr2.annotation.shjs.js/sh_main.min.js">
   </script>
 
-  <link rel="shjs_root" tal:attributes="href string:${view/portal_url}/++resource++pmr2.annotation.shjs.lang/"/>
+  <script type="text/javascript"
+    tal:content="string:var shjs_root = '${view/portal_url}/++resource++pmr2.annotation.shjs.lang/'">
+  </script>
 
   <script type="text/javascript">
   //<![CDATA[
@@ -47,7 +49,6 @@
     });
 
     jq(window).bind('load', function() { 
-      shjs_root = jq('link[rel=shjs_root]')[0].href;
       resizeMainView();
       sh_highlightDocument(shjs_root, '.min.js');
     });
