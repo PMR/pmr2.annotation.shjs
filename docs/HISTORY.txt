@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.4 - Released (2013-07-08)
+---------------------------
+
+* Use the pmr2.z3cform macros instead.
+* Made the definition more friendly for diazo templates.
+
 0.3 - Released (2012-10-03)
 ---------------------------
 
